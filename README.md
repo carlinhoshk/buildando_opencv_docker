@@ -64,9 +64,9 @@ $ sudo /etc/init.d/dphys-swapfile start
 ```
 ![Screenshot_20221105_093951](https://user-images.githubusercontent.com/40872405/200148731-0092d033-99cf-4de2-945d-cd100b737f66.png)
 
-##### se você der o commando $free -m é para estar como o meu, agora sim você poderá dar procedimento a instalção da imagem opencv
+#### se você der o commando $free -m é para estar como o meu, agora sim você poderá dar procedimento a instalção da imagem opencv
   
-# Após você ter certeza que seu Docker está funcionando você precisa builda sua Imagem Docker, volte uma pasta ou abra novamente o repositorio
+## Após você ter certeza que seu Docker está funcionando você precisa builda sua Imagem Docker, volte uma pasta ou abra novamente o repositorio
   
 ```sh
 $ cd ../
@@ -76,7 +76,7 @@ $ cd ../
 $ docker build -f Dockerfile.arm .
 
 ```
-# Nesse momento a imagem vai ser buildada no meu Pi 3b+ demorou em torno de 4 Horas a 6 Horas. eu aconselho realmente esperar tudo isso, mesmo quando parecer que travou só cheque depois de dar exatos 4 horas no minimo. 
+## Nesse momento a imagem vai ser buildada no meu Pi 3b+ demorou em torno de 4 Horas a 6 Horas. eu aconselho realmente esperar tudo isso, mesmo quando parecer que travou só cheque depois de dar exatos 4 horas no minimo. 
 
 # Após terminar escreva 
 ```sh
@@ -86,20 +86,21 @@ $ docker image list
 ![Screenshot_20221105_094738](https://user-images.githubusercontent.com/40872405/200149294-61a3ae84-e42c-4415-81ee-7649f900939c.png)
 
 
-# Em IMAGE ID o seu vai está diferente, como eu não dei uma TAG para minha imagem ela fica como <none> marcado em vermelho. mas é possivel usar o numero da TAG ( eu acho mais facil )
+## Em IMAGE ID o seu vai está diferente, como eu não dei uma TAG para minha imagem ela fica como none marcado em vermelho. mas é possivel usar o numero da TAG ( eu acho mais facil )
 
-# Bom agora com tudo pronto podemos executar a imagem em modo interativo
+
+## Bom agora com tudo pronto podemos executar a imagem em modo interativo
  ```sh
 $docker run -it 7187a834a450 bash
  ```
 ![Screenshot_20221105_095230](https://user-images.githubusercontent.com/40872405/200149104-d39c3fef-7517-4f41-987f-d469737cca1d.png)
 
-#Pronto lembrando que no Print acima eu passei o parametro --rm, no momento que eu fechar o container ele vai ser excluido. lembrando que a imagem vai continuar, Se você quiser deixar o container 'vivo' é só escrever o comentario $docker run -it 7187a834a450 bash 
+## Pronto lembrando que no Print acima eu passei o parametro --rm, no momento que eu fechar o container ele vai ser excluido. lembrando que a imagem vai continuar, Se você quiser deixar o container 'vivo' é só escrever o comentario $docker run -it 7187a834a450 bash 
 
-# pronto agora se quiser voltar a memoria swap é por sua conta propria 
+### pronto agora se quiser voltar a memoria swap é por sua conta propria 
   
   
-  ![Screenshot_20221105_100414](https://user-images.githubusercontent.com/40872405/200149250-89ed8ecf-79ae-4330-ab08-72e1b8f56f35.png)
+![Screenshot_20221105_100414](https://user-images.githubusercontent.com/40872405/200149250-89ed8ecf-79ae-4330-ab08-72e1b8f56f35.png)
 
 ##Links e Documentação usada no processo:
   
